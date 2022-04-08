@@ -1,26 +1,39 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <TextInterface />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import TextInterface from './components/TextInterface.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    TextInterface
+  },
+  data: function () {
+    return {
+      image: '..assets/background.jpg',
+    }
   }
 }
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+    z-index: -1;
+
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  height: 100vh;
+  width: 100vw
 }
 </style>
